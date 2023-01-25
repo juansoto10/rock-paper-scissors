@@ -1,179 +1,325 @@
-*{
-    box-sizing: border-box;
-    margin: 0;
-    padding: 0;
+:root {
+  --main-font: 'Sedgwick Ave', cursive;
+  --sec-font: 'Gugi', cursive;
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+  
+html {
+  font-size: 62.5%;
+}
+  
+body {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url("../images/background.jpg");
+  background-attachment: scroll;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  background-color: #140330;
+  font-family: var(--main-font);
+  font-size: 1.6rem;
+  padding: 24px 0;
+}
+  
+header {
+  text-align:center; 
+  color: white;
+}
+
+.title {
+  text-align:center; 
+  color: white;
+  font-size: 4.8rem;
+  line-height: 6rem;
+  letter-spacing: 0.45rem;
+  text-shadow: 2px 2px 16px #b40d96;
+  padding: 0 26px;
+}
+  
+
+/* Restart button */
+
+/* .btn-container {
+  text-align: left;
+} */
+  
+.restart-btn {
+  color: white;
+  background-color: #f62ad11e;
+  border-radius: 14px;
+  padding: 10px 10px;
+  font-family: var(--main-font);
+  font-size: 2.2rem;
+  cursor: pointer;
+  width: 12rem;
+  transition: all 0.4s ease;
+  margin-top: 38px;
+  border: 1px solid #f969de;
+}
+  
+.restart-btn:hover {
+  cursor: pointer;
+  background: #fb34d667;
+  text-shadow: 1px 1px 2px #140330;
+}
+  
+
+/* Score board */
+
+.score-board {
+  margin: 6% 0 4%;
+  text-align: center;
+  color: white;
+  border: 3px solid white;
+  width: 250px;
+  font-family: var(--sec-font);
+  font-size: 6rem;
+  padding: 40px 10px;
+  position: relative
+}
+  
+.badge {
+  background: #d00883;
+  font-size: 3rem;
+  width: 8.2rem;
+  padding: 10px;
+  border-radius: 14px;
+}
+  
+#user-badge {
+  position: absolute;
+  left: -26%;
+  top: 47px;
+}
+  
+#cpu-badge {
+  position: absolute;
+  right: -26%;
+  top: 47px;
+}
+
+
+/* Player choices */
+
+.choices {
+  display: flex;
+  justify-content: center;
+  margin: 15px 0 20px;
+}
+  
+.choices .choice {
+  cursor: pointer;
+  border: 2px solid #f969de;
+  background-color: #f62ad12f;
+  border-radius: 40%;
+  box-shadow: 0 12px 16px 0 rgba(0,0,0,0.24), 0 17px 50px 0 rgba(0,0,0,0.19);
+  transition: all 0.4s ease;
+  padding: 3px;
+}
+  
+.choices .choice:nth-child(2) {
+  margin: 0 20px;
+}
+
+.choices .choice:hover {
+  cursor: pointer;
+  background: #fb34d667;
+}
+  
+.choices .choice img {
+  width: 100%;
+}
+
+h2 {
+  text-align: center;
+  color: white;
+  font-size: 2.8rem;
+  letter-spacing: 0.25rem;
+  margin-bottom: 22px;
+  text-shadow: 1px 1px 18px #b40d96;
+}
+
+
+/* Partial Result */
+
+.partial {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 82%;
+  height: 64px;
+}
+#partial-result {
+  text-align: center;
+  font-size: 2.4rem;
+  color: #f969de;
+  text-shadow: 1px 1px 6px #fd6ee3eb;
+}
+
+/* Modal */
+
+.text-win {
+  color: #76ff76;
+  font-family: var(--main-font);
+  font-size: 2.6rem;
+  letter-spacing: 0.2rem;
+}
+
+.text-end {
+  color: #d33bb7;
+  font-family: var(--main-font);
+  font-size: 2.6rem;
+  letter-spacing: 0.2rem;
+}
+
+.text-lose {
+  color: #ef2565;
+  font-family: var(--main-font);
+  font-size: 2.6rem;
+  letter-spacing: 0.2rem;
+}
+
+.modal-content p {
+  font-family: var(--main-font);
+  font-size: 2.2rem;
+  letter-spacing: 0.1rem;
+}
+  
+
+/* Media Queries */
+@media screen and (max-width: 639px) {
+  .restart-btn {
+    margin-top: 20px;
+  }
+}  
+
+
+@media screen and (max-width: 480px) {
+  body {
+    padding: 0 22px;
+  }
+  .title {
+    font-size: 3.8rem;
+    line-height: 3.9rem;
+  }
+
+  /* Restart button */
+
+  .restart-btn {
+    font-size: 1.5rem;
+    margin-top: 18px;
   }
   
-  html{
-    font-size: 62.5%;
+  /* Player choices */
+
+  .choices .choice:nth-child(2) {
+    margin: 0 10px;
   }
-  
-  body{
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    min-height: 100vh;
-    background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url("../images/background.jpg");
-    background-attachment: scroll;
-    background-repeat: no-repeat;
-    background-size: cover;
-    background-position: center;
-    background-color: #140330;
-    font-family: monospace;
-    font-size: 1.6rem;
-    padding: 30px 0;
+  h2 {
+    font-size: 2.2rem;
   }
-  
-  header{
-    text-align:center; 
-    color: white;
+
+  /* Score board */
+
+  .score-board {
+    font-size: 5rem;
+    width: 180px;
+    padding: 26px 10px;
+  }
+  .badge {
+    font-size: 2.3rem;
+  }
+  #user-badge {
+    position: absolute;
+    left: -38%;
+    top: 34px;
+  }
+    
+  #cpu-badge {
+    position: absolute;
+    right: -38%;
+    top: 34px;
+  }
+
+  /* Modal */
+  .text-win, .text-lose {
     font-size: 2.5rem;
   }
-  
-  /* ------------------------------Restart button */
-  .btn-container{
-    text-align: center;
+
+  .modal-content p {
+    font-size: 1.9rem;
+    letter-spacing: 0.12rem;
   }
-  
-  .restart-btn{
-    color: white;
-    background-color: transparent;
-    border-radius: 12px;
-    padding: 10px 10px;
-    font-weight: bold;
-    font-size: 1.6rem;
-    cursor: pointer;
-    transition: all 0.3s ease;
-    margin-top: 30px;
+}
+
+
+@media screen and (max-height: 680px) {
+  .score-board {
+    margin: 8% 0 6%;
+    width: 170px;
+    font-size: 5.8rem;
+    padding: 17px 10px;
   }
-  
-  .restart-btn:hover{
-    cursor: pointer;
-    background-color: white;
-    color: black;
+    
+  .badge {
+    font-size: 2.8rem;
+    width: 8rem;
+    padding: 8px;
   }
-  
-  /* ------------------------------Score board */
-  .score-board{
-    margin: 8% 0 4%;
-    text-align: center;
-    color: white;
-    border: 3px solid white;
-    width: 250px;
-    font-size: 6rem;
-    padding: 30px 10px;
-    position: relative
-  }
-  
-  .badge{
-    background:#c112a0;
-    font-size: 3rem;
-    padding: 10px 10px;
-    border-radius: 12px;
-  }
-  
-  #user-badge{
+    
+  #user-badge {
     position: absolute;
-    left: -40px;
+    left: -36%;
+    top: 32px;
   }
-  
-  #cpu-badge{
+    
+  #cpu-badge {
     position: absolute;
-    right: -55px;
+    right: -36%;
+    top: 32px;
   }
   
-  /* ------------------------------Player choices */
-  .choices{
-    display: flex;
-    justify-content: center;
-    margin: 20px 0 25px;
+  
+  /* Player choices */
+  
+  .choices {
+    margin: 15px 0 20px;
+  }
+    
+  .choices .choice:nth-child(2) {
+    margin: 0 13px;
+  }
+    
+  .choices .choice img {
+    width: 12vh;
   }
   
-  .choices .choice{
-    cursor: pointer;
-    border: 3px solid  #531345;
-    background-color: rgba(255, 255, 255, 0.3);
-    border-radius: 40%;
-    box-shadow: 0 12px 16px 0 rgba(0,0,0,0.24), 0 17px 50px 0 rgba(0,0,0,0.19);
-    transition: all 0.1s ease;
-  }
-  
-  .choices .choice:nth-child(2){
-    margin: 0 20px;
-  }
-  
-  .choices .choice:hover{
-    cursor: pointer;
-    background: #531345;
-  }
-  
-  .choices .choice img{
-    width: 100%;
-  }
-  
-  h2{
+  h2 {
     text-align: center;
     color: white;
-    font-size: 2.5rem;
+    font-size: 2.4rem;
+    letter-spacing: 0.22rem;
   }
-  
-  /* ------------------------------Modal */
-  .text-win{
-    color: #289a28;
-    font-size: 4rem;
+
+
+  .partial {
+    height: 56px;
   }
-  
-  .text-lose{
-    color: #ff0000;
-    font-size: 4rem;
-  }
-  
-  .modal-content p{
+  #partial-result {
     font-size: 1.8rem;
   }
-  
-  /* ------------------------------Media Queries */
-  
-  @media screen and (max-width: 480px){
-    body{
-      padding: 0 22px;
-    }
-    .title{
-      font-size: 3.5rem;
-    }
-  
-    /* --------------Restart button */
-    .restart-btn{
-      font-size: 1rem;
-      margin-top: 20px;
-    }
-    
-    /* --------------Player choices */
-    .choices .choice:nth-child(2){
-      margin: 0 10px;
-    }
-    h2{
-      font-size: 2rem;
-    }
-  
-    /* --------------Score board */
-    .score-board{
-      font-size: 5rem;
-      width: 180px;
-    }
-    .badge{
-      font-size: 2rem;
-    }
-  
-    /* --------------Score board */
-    .text-win{
-      font-size: 3rem;
-    }
-    .text-lose{
-      font-size: 3rem;
-    }
-    .modal-content p{
-      font-size: 1.5rem;
-    }
+
+  .text-win, .text-lose {
+    font-size: 2rem;
+    letter-spacing: 0.17rem;
   }
+}
