@@ -61,3 +61,13 @@
     opacity: 1;
   }
 }
+
+
+@media screen and (min-width: 1200px) {
+  .modal-content {
+    width: 80%;
+    max-width: 346px;
+    height: 240px;
+    margin: 13.4% auto;
+  }
+}
