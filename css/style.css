@@ -58,7 +58,7 @@ header {
   cursor: pointer;
   width: 12rem;
   transition: all 0.4s ease;
-  margin-top: 38px;
+  margin-top: 30px;
   border: 1px solid #f969de;
 }
   
@@ -195,9 +195,9 @@ h2 {
     padding: 38px 0;
   }
   .title {
-    font-size: 7rem;
-    line-height: 6.4rem;
-    letter-spacing: 0.5rem;
+    font-size: 6,4rem;
+    line-height: 6rem;
+    letter-spacing: 0.4rem;
     margin-bottom: 14px;
   }
 
@@ -207,10 +207,10 @@ h2 {
   }
 
   .score-board {
-    font-size: 9.6rem;
-    width: 340px;
-    padding: 50px 10px;
-    margin: 50px 0 40px;
+    font-size: 9.2rem;
+    width: 320px;
+    padding: 40px 10px;
+    margin: 30px 0 30px;
     border: 6px solid white;
   }
 
@@ -237,8 +237,8 @@ h2 {
     margin-bottom: 30px;
   }
   .choices .choice {
-    width: 10vw;
-    max-width: 140px;
+    width: 9vw;
+    max-width: 130px;
   }
     
   .choices .choice:nth-child(2) {
@@ -246,8 +246,8 @@ h2 {
   }
 
   h2 {
-    font-size: 3.2rem;
-    margin-bottom: 30px;
+    font-size: 3rem;
+    margin-bottom: 24px;
   }
 
   .partial {
@@ -269,11 +269,7 @@ h2 {
 }  
 
 
-@media screen and (max-width: 639px) {
-  .restart-btn {
-    margin-top: 20px;
-  }
-}  
+
 
 
 @media screen and (max-width: 480px) {
@@ -344,7 +340,7 @@ h2 {
     width: 94%;
   }
   #partial-result {
-    font-size: 2.1rem;
+    font-size: 2rem;
   }
 }
 
@@ -356,11 +352,12 @@ h2 {
   }
 
   .restart-btn {
-    margin-bottom: 12px;
+    margin-bottom: 8px;
+    margin-top: 15px;
   }
 
   .score-board {
-    margin: 8% 0 6%;
+    margin: 2% 0 3%;
     width: 170px;
     font-size: 5.8rem;
     padding: 17px 10px;
@@ -390,13 +387,16 @@ h2 {
   .choices {
     margin: 8px 0 8px;
   }
+  .choices .choice {
+    width: 12vh;
+  }
     
   .choices .choice:nth-child(2) {
     margin: 0 13px;
   }
     
   .choices .choice img {
-    width: 12vh;
+    width: 10vh;
   }
   
   h2 {
